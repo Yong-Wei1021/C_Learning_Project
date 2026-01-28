@@ -1,6 +1,14 @@
 # 排除所有層級下的執行檔 (不論在哪個資料夾)
 **/server
 **/client
-
+**/hello
+**/bitwise_test
+**/memory_test
+**/pointer_test
+**/array_of_pointers
+**/linked_list
+**/linked_list_v1
+**/main
+**/pointers_of_pointers
 # 排除所有編譯產生的物件檔
 *.o
