@@ -1,1 +1,1 @@
-這是我的C語言學習專案，繼續努力精進中。
+It's my C learning project, keep working!
