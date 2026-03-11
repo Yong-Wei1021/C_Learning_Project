@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>      // 提供 read, write, close 
-#include <arpa/inet.h>   // 提供網路地址轉換函式
+#include "common.h"
 
 int main() {
     int sock_fd = 0;

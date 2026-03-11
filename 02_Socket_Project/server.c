@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <arpa/inet.h>
-#include <time.h>
+#include "common.h"
 
 int main() {
     int server_fd, new_socket;
@@ -15,7 +10,7 @@ int main() {
     // 檢查 socket 是否建立成功
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (server_fd < 0) {
-        perror("socket 建立失敗");
+        perror("socket 建立失敗了");
         exit(EXIT_FAILURE);
     }
 

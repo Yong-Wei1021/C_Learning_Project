@@ -1,4 +1,6 @@
 # 排除所有層級下的執行檔 (不論在哪個資料夾)
+**/fork_test
+**/orphan_test
 **/server
 **/client
 **/hello
