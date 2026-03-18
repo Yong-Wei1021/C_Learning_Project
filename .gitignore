@@ -1,16 +1,26 @@
-# 排除所有層級下的執行檔 (不論在哪個資料夾)
-**/fork_test
-**/orphan_test
-**/server
-**/client
-**/hello
-**/bitwise_test
-**/memory_test
-**/pointer_test
-**/array_of_pointers
-**/linked_list
-**/linked_list_v1
-**/main
-**/pointers_of_pointers
-# 排除所有編譯產生的物件檔
+# === 1. 編譯產生的執行檔 (統一使用 .out 結尾) ===
+*.out
+*.exe
+
+# === 2. 中間產物與除錯資訊 ===
 *.o
+*.obj
+*.dSYM/
+
+# === 3. IDE 與系統專屬設定 (保持專案乾淨) ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# === 4. 大型專案常用編譯目錄 ===
+build/
+bin/
+
+# === 5. 暫存與日誌檔 ===
+*.log
+*.tmp
+*.swp
+
+# 6. 忽略特定的檔案
+sheet.md

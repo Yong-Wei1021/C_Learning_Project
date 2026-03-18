@@ -1,34 +1,29 @@
-//自動編譯檔案
 {
     "version": "2.0.0",
     "tasks": [
         {
-            // 任務名稱：方便您識別
-            "label": "Build C Program with Debug Info (-g)", 
-            
-            // 使用的命令
-            "command": "gcc",
-            
-            // 傳遞給 gcc 的參數：
+            "type": "cppbuild",
+            "label": "C/C++: gcc build active file",
+            "command": "/usr/bin/gcc",
             "args": [
-            "-fdiagnostics-color=always",
-            "-g",
-            "${file}", // 編譯當前檔案
-            "-o",
-            "${fileDirname}/${fileBasenameNoExtension}" // 輸出檔名 = 原始檔名 (不含 .c)
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-I", "${workspaceFolder}/include", // 加上 include 目錄，讓編譯器能找到 .h檔
+                "-o", "${fileDirname}/${fileBasenameNoExtension}.out", // 執行檔一律加上 .out
+                "-Wall" // 顯示所有警告訊息
             ],
-            
-            // 將這個任務設定為預設的「建置」任務
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            
-            "type": "shell",
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": "$gcc"
+            "detail": "編譯器: /usr/bin/gcc"
         }
     ]
 }
