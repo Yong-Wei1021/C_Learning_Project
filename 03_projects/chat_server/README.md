@@ -12,3 +12,5 @@
 1. 編譯：`gcc server.c -o server` 與 `gcc client.c -o client`
 2. 先啟動伺服器：`./server`
 3. 再啟動客戶端：`./client`
+
+### 多個檔案 + 有結構 → 才用 Makefile
